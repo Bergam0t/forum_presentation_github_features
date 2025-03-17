@@ -297,8 +297,6 @@ Heading back to our 'issues' page we can now see this in our list of issues.
 ![](assets/2025-03-17-17-34-25.png)
 
 
-
-
 ## Labels
 
 :::: {.columns}
@@ -364,6 +362,16 @@ And they'll show up in the linked issues and pull requests too
 
 ![](assets/2025-03-17-17-44-37.png)
 
+
+## Tagging People in issues
+
+If you mention someone by their GitHub username - prefacing it with an @ symbol - then they will get a notification.
+
+![](assets/2025-03-17-18-11-09.png)
+
+On a public repo - or one where you've added me as a collaborator - you could summon me like that!
+
+
 ## Closing Issues
 
 When you are done with an issue, we can write a comment (optional, but recommended!) and close it down.
@@ -426,20 +434,81 @@ Now, when we click on the milestone header, we are given the option to add any i
 
 Projects are an optional extra that you can use to enhance your use of issues.
 
+We can access them from the 'Projects' header.
 
+![](assets/2025-03-17-18-01-11.png)
 
-##
+## Creating a new project
 
+We'll click 'new project'
 
+![](assets/2025-03-17-18-01-37.png)
 
+## Choosing aa project template
 
+We'll be provided with a list of possible project layouts.
 
+My favourite is Kanban - but feel free to experiment!
 
+![](assets/2025-03-17-18-02-13.png)
 
+## Setting the project name
 
+Give your project a name.
 
+![](assets/2025-03-17-18-02-56.png)
 
+## Our project
 
+Initially we're presented with a list of empty columns.
+
+![](assets/2025-03-17-18-03-39.png)
+
+We then click on 'add item'
+
+## Adding issues to columns
+
+This brings up a search bar
+
+Clicking on the plus gives us some more options.
+
+![](assets/2025-03-17-18-04-33.png)
+
+If we click 'add items from repository' we can access our current repo's issues - or issues from other repos!
+
+![](assets/2025-03-17-18-05-16.png)
+
+## Managing your proejct
+
+Once this is done, we have an issue in the column.
+
+![](assets/2025-03-17-18-05-46.png)
+
+We can move this around as we progress. Moving it to done automatically closes it!
+
+![](assets/firefox_MslcDJ5LLP.gif)
+
+## Managing columns
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+Clicking on the three dots allows us to change the default limit for issues per column (0 = no limit)
+
+![](assets/2025-03-17-18-08-05.png)
+
+:::
+
+::: {.column width='50%'}
+
+We can also add, delete and reorder columns (by clicking and dragging them).
+
+![](assets/2025-03-17-18-08-37.png)
+
+:::
+
+::::
 
 # Project Documentation and Validation
 

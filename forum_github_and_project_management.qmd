@@ -653,21 +653,136 @@ STARS stands for **'Sharing Tools and Artefacts for Reusable Simulation'**
 It's possible to set up a Quarto project within the same
 
 
-# Cool Finds
+# Cool Finds - New Streamlit Features
 
-## Code Snippets
+## Key useful things in 1.43.0
 
-Code snippets are a handy way to shorten the process of entering repetitive code.
+![](assets/2025-03-17-18-16-08.png)
+
+![](assets/2025-03-17-18-16-33.png)
+
+
+Read the full release notes [here](https://docs.streamlit.io/develop/quick-reference/release-notes/2025#version-1430)
+
+## Key useful things in 1.42.0
+
+![](assets/2025-03-17-18-17-21.png)
+
+![](assets/2025-03-17-18-17-41.png)
+
+![](assets/2025-03-17-18-17-50.png)
+
+![](assets/2025-03-17-18-18-00.png)
+
+Read the full release notes [here](https://docs.streamlit.io/develop/quick-reference/release-notes/2025#version-1420)
+
+## Key useful things in 1.39.0
+
+![](assets/2025-03-17-18-19-54.png)
+
+Read the full release notes [here](https://docs.streamlit.io/develop/quick-reference/release-notes/2024#version-1390)
+
+## Upgrading Streamlit
+
+![](assets/2025-03-17-18-15-31.png)
+
+Make sure you update version numbers in your requirements.txt or environment.yml file!
+
+# Cool Finds - Streamlit Icon Metric Cards
+
+I've adapted some code to make a neat little metric card that can acept icons from the material icon library.
+
+![](assets/2025-03-17-18-25-51.png)
+
+## Code and output
+
+```{python}
+#| eval: false
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the function code"
+def iconMetricContainer(key,icon_unicode,css_style=None,icon_color='grey', family="filled", type="icons"):
+    """Function that returns a CSS styled container for adding a Material Icon to a Streamlit st.metric value
+
+    CREDIT for starter version of this code: https://discuss.streamlit.io/t/adding-an-icon-to-a-st-metric-easily/59140?u=sammi1
+
+    Args:
+        key (str): Unique key for the component
+        iconUnicode (str): Code point for a Material Icon, you can find them here https://fonts.google.com/icons. Sample \e8b6
+        css_style(str, optional): Additional CSS to apply
+        icon_color (str, optional): HTML Hex color value for the icon. Defaults to 'grey'.
+        family(str, optional): "filled" or "outline". Only works with type = "icons"
+        type(str, optional): "icons" or "symbols"
+
+    Returns:
+        DeltaGenerator: A container object. Elements can be added to this container using either the 'with'
+        notation or by calling methods directly on the returned object.
+    """
+
+    if (family == "filled") and (type=="icons"):
+        font_family = "Material Icons"
+    elif (family == "outline") and (type=="icons"):
+        font_family = "Material Icons Outlined"
+    # elif (family == "filled") and (type=="symbols"):
+    #     font_family = "Material Symbols"
+    elif type=="symbols":
+        font_family = "Material Symbols Outlined"
+    else:
+        print("ERROR - Check Params for iconMetricContainer")
+        font_family = "Material Icons"
+
+    css_style_icon=f'''
+                    div[data-testid="stMetricValue"]>div::before
+                    {{
+                        font-family: {font_family};
+                        content: "\{icon_unicode}";
+                        vertical-align: -20%;
+                        color: {icon_color};
+                    }}
+                    '''
+
+    if css_style is not None:
+        css_style_icon += """
+
+        """
+
+        css_style_icon += css_style
+
+    iconMetric=stylable_container(
+                key=key,
+                css_styles=css_style_icon
+            )
+    return iconMetric
+```
+
+
+```{python}
+#| eval: false
+#| echo: true
+## EXAMPLE USAGE
+my_formatted_value_for_metric="6.3%"
+
+with iconMetricContainer(key="nonattend_metric", icon_unicode="e61f", family="outline"):
+    st.metric("Average Number of Calls Resource Couldn't Attend",
+            my_formatted_value_for_metric,
+            border=True)
+```
+
+![](assets/2025-03-17-18-25-51.png)
+
+# Cool Finds - Expandable Code Snippets in VSCode
+
+Is there something clunky you have to keep looking up in VSCode?
+
+Turn it into your own reusable snippet!
 
 ## Opening the 'Configure Snippets' Menu
-
-
-
-
 
 :::: {.columns}
 
 ::: {.column width='50%'}
+
+Open the menu from file --> preferences
 
 :::
 
@@ -685,10 +800,11 @@ Code snippets are a handy way to shorten the process of entering repetitive code
 
 ::: {.column width='50%'}
 
-We will now be presented with a list of possible snippets.
+We will now be presented with a list of possible snippet languages.
 
-If working with Quarto, I'd recommend you use 'markdown' rather than 'Quarto', as then there's a neat little shortcut in VSCode we can use
-to
+If working with Quarto, I'd recommend you use 'markdown' rather than 'Quarto', as then there's a neat little shortcut in VSCode we can use to access snippets while writing quarto docs (CTRL + SPACE)
+
+Alternatively, select Python
 
 :::
 
@@ -700,45 +816,149 @@ to
 
 ::::
 
-## Writing our snippet
+## Writing our snippet - Quarto
 
 :::: {.columns}
 
 ::: {.column width='50%'}
 
+Here, I've written a sample
+
+You can find more out writing snippets [here](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_create-your-own-snippets)
+
 :::
 
 ::: {.column width='50%'}
+
+![](assets/2025-03-17-18-29-49.png)
 
 :::
 
 ::::
 
-## Using our snippet
+```{python}
+#| eval: false
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
+
+{
+	// Place your snippets for markdown here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"Make a two-column layout": {
+		"prefix": "col2",
+		"body": [
+			":::: {.columns}",
+			"",
+			"::: {.column width='50%'}",
+			"",
+			":::",
+			"",
+			"::: {.column width='50%'}",
+			"",
+			":::",
+			"",
+			"::::"
+		],
+		"description": "Create a column layout in quarto with two columns of equal width"
+	},
+
+	"Make a fragment": {
+		"prefix": "frag",
+		"body": [
+			"::: {.fragment}",
+			"",
+			":::"
+
+		],
+		"description": "Create a quarto fragment for incremental revealing of content"
+	},
+
+	"Make an incremental list": {
+		"prefix": "inc",
+		"body": [
+			"::: {.incremental}",
+			"",
+			":::"
+
+		],
+		"description": "Create a quarto incremental list container for revealing one bullet point at a time"
+	}
+}
+
+```
+
+## Using our Quarto snippet
 
 :::: {.columns}
 
-::: {.column width='50%'}
+::: {.column width='20%'}
+
+Now, when I press CTRL + SPACE, I can type in my snippet IDs and select them to make them populate my document
 
 :::
 
-::: {.column width='50%'}
+::: {.column width='80%'}
 
-:::
-
-::::
-
-
-## More on snippets
-
-:::: {.columns}
-
-::: {.column width='50%'}
-
-:::
-
-::: {.column width='50%'}
+![](assets/Code_U8Uj1xzgu1.gif)
 
 :::
 
 ::::
+
+
+## Writing and using our snippet - Python
+
+Python snippets are similar!
+
+Here we've defined a snippet called 'condlist' for generating a conditional list comprehension.
+
+```{python}
+#| eval: false
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
+
+{
+	// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"Conditional list comprehension": {
+		"prefix": "condlist",
+		"body": [
+			"['Even' if n % 2 == 0 else 'Odd' for n in a]"
+		],
+		"description": "Provide an adaptable template for conditional logic in a list comprehension"
+	}
+
+}
+
+```
+
+![](assets/Code_huFDV4RcMj.gif)
+
+
+To find out more on snippets, [click here](https://code.visualstudio.com/docs/editor/userdefinedsnippets)

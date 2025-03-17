@@ -1,0 +1,675 @@
+---
+title: "HSMA Forum: Helping us Help You!"
+author:
+    name: Sammi Rosser
+    affiliation: Health Service Modelling Associates Programme
+format:
+  revealjs:
+    output-file: index.html
+    embed-resources: true
+    view-distance: 100
+    height: 800
+    width: 1250
+    transition: slide
+    plotly-connected: true
+    background-transition: fade
+    theme: [default, custom.scss]
+    title-slide-attributes:
+        data-background-image: banner.png
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+
+---
+
+# Helping us to help you
+
+I want us to be able to provide meaningful and timely help with your projects when other avenues have failed to unstick things.
+
+There are a few things you can do to make it easier for us to help you.
+
+## Try other avenues first!
+
+::: {.incremental}
+- Try debugging your code with print statements or logging (see [this chapter](https://des.hsma.co.uk/basic_debugging_tactics.html) of the DES book for an intro!)
+- Make sure you've saved any changes!
+- Close your terminal and rerun (or, if using a notebook, hit 'clear all outputs' and 'restart')
+- Take a general look on Google
+- Take a look at StackOverflow
+- Ask the community via your project channel
+- Try using an AI tool (Perplexity and ChatGPT are both good options), but take everything it says with a pinch of salt...
+    - make sure you go through code it provides carefully so you understand it, and consider writing (formal or informal) tests to verify it works properly
+:::
+
+## Make your code available...
+
+If all else fails - I really am happy to help (and have taken a look at various issues for people this year)!
+
+It helps if you can give me as much information as possible about
+
+- what you've already tried
+- what seems to be going wrong
+- what you're trying to achieve, and why
+
+Having your code available on GitHub is the easiest way for us to troubleshoot issues.
+
+If you cannot provide it on GitHub, sending code files to us on Slack is acceptable, but please attach it as a file to a Slack message rather than copying and pasting.
+
+## ... and runnable!
+
+Please either provide
+
+- an environment.yml or requirements.txt (if you have made your own environment from scratch)
+- or details of which of the HSMA environments you have used, and any packages you've added into those environments
+
+If you are using branches, please make it clear which branch we need to be looking at!
+
+## What if I'm not allowed to share?
+
+We might still be able to help!
+
+::: {.fragment}
+
+Can you give us the gist of your problem? Like before, this might involve talking about
+
+- what you've already tried
+- what seems to be going wrong
+- what you're trying to achieve, and why
+
+:::
+
+::: {.fragment}
+
+You could also look into
+
+- whether you're able to share part or all of the code without data
+- providing simple fake data (which you could even make in something like Excel)
+    - this is also a great option for wider sharing and reproducibility of your code
+
+:::
+
+
+## Making your code readable {.smaller}
+
+Understanding someone else's code can be tricky - and time-consuming - at the best of times.
+
+The following will really help us!
+
+::: {.incremental}
+- Comments!
+    - Extensive comments are our friends at this stage. Why have you taken a particular approach? What is a given function doing?
+    - Too many comments > too few
+- Good variable and function names increase readability
+    - e.g. rather than 'x, y, z' or 'input_1, input_2', make your variables more descriptive, like 'total_referrals', 'number_of_nurses'
+- Commenting out (or removing) unused code
+    - The shortcut of highlighting code and pressing `CTRL + /` can make it easier to get temporarily comment out bits of code
+- Adhering to PEP8 guidance on line length makes a big difference too
+:::
+
+
+## Making your code *super* readable with docstrings
+
+One of the best ways to make your code even easier for us to work with is to use **docstrings**.
+
+Docstrings are like a super-comment that makes it easier to understand your functions, classes, and methods - wherever you are accessing them in the code.
+
+When you start using a function from a package and it pops up with a load of extra useful details, that's its docstring you are seeing.
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+![](assets/2025-03-17-15-47-24.png)
+
+:::
+
+::: {.column width='50%'}
+
+![](assets/2025-03-17-15-47-43.png)
+
+:::
+
+::::
+
+## Writing docstrings
+
+
+## Working asynchronously {.smaller}
+
+:::: {.columns}
+
+::: {.column width='25%'}
+
+A 'quick meeting' can often take a lot more time than you'd think!
+
+(and in all honesty, unless it's something like a typo, I'm unlikely to be able to resolve it within a call - though if you'd strongly prefer this, I can work with it)
+
+However, I can often squeeze in some time looking at problems and then send you details of
+
+- what I fixed
+- how I went about working out what to do!
+
+:::
+
+::: {.column width='75%'}
+
+![](assets/2025-03-17-16-55-10.png)
+
+
+:::
+
+::::
+
+
+# Advanced GitHub Features
+
+
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+GitHub isn’t just a great place to version control your code…
+
+It’s a great place to
+
+- plan your project
+- track problems
+- and get help too!
+
+
+:::
+
+::: {.column width='50%'}
+
+:::{.callout-tip}
+Want a reminder of how to use GitHub?
+
+Take a look at session 7a here:
+
+https://hsma.co.uk/hsma_content/
+modules/current_module_details/
+7_git_and_web_development
+
+Or scan the QR code
+
+![](assets/2025-03-17-17-14-50.png)
+
+:::
+
+:::
+
+::::
+
+
+# GitHub Issues
+
+GitHub issues are a great built-in (and free) way of tracking aspects of your project.
+
+They are almost a built in to-do list to help you track what needs to happen - and what's already happened.
+
+They can be particularly useful for collaborative projects, but can also be very handy for solo projects.
+
+## What can we use issues for?
+
+The great thing about your repo... is that it's your repo!
+
+Established projects may have more rules about what can be an issue and how it's formatted, but you can set the rules on your project.
+
+So you could use issues for
+
+::: {.incremental}
+- Features you want to add
+- Data you need to obtain
+- Documentation you need to write
+- Minor (and major!) bugs you need to fix
+:::
+
+## Examples of projects using issues - vidigi
+
+In the [vidigi](https://github.com/Bergam0t/vidigi/issues) issues, I'm primarily talking to myself and using it as a big to-do list.
+
+![](assets/2025-03-17-17-22-55.png)
+
+## Examples of projects using issues
+
+In another project, we have used it for three of us to be able to communicate asynchronously about the project
+
+![](assets/2025-03-17-17-23-50.png)
+
+
+## Examples of projects using issues - Helena's DES
+
+Helena has been using these very effectively in her project
+
+![](assets/2025-03-17-17-28-43.png)
+
+<https://github.com/Countess-of-Chester-Hospital-NHS-FT/Non-Elective-Flow-Simulation/issues?q=is%3Aissue%20>
+
+## Communication via Issues - a sneak peak
+
+Including to summon me!
+(more on this later)
+
+![](assets/2025-03-17-17-30-20.png)
+
+![](assets/2025-03-17-17-30-39.png)
+
+
+## The Issues Tab
+
+In your repositories, whether they are public or private,
+you should see an ‘Issues’ tab.
+
+![](assets/2025-03-17-17-15-44.png)
+
+
+## Our First Issue
+
+When we first load this up, there's nothing here... so let's change that!
+
+We'll click the 'New Issue' button
+
+![](assets/2025-03-17-17-16-45.png)
+
+
+## Populating our first issue
+
+The minimum we need to provide is a title (though it's a good idea to put in some description too)
+
+![](assets/2025-03-17-17-32-52.png)
+
+## Viewing our first issue
+
+This will take us to a view where we can add comments to the issue.
+
+- We can edit the title with the 'edit' button
+- We can edit the description with the three dots
+- We can close the issue when we've resolved it
+
+![](assets/2025-03-17-17-33-13.png)
+
+
+## Viewing our issue list
+
+Heading back to our 'issues' page we can now see this in our list of issues.
+
+![](assets/2025-03-17-17-34-25.png)
+
+
+
+
+## Labels
+
+:::: {.columns}
+
+::: {.column width='40%'}
+
+Labels allow us to
+
+- group issues
+- make it easy to quickly identify what an issue is
+
+Github provides us with a selection of predefined labels that we can choose from.
+
+:::
+
+::: {.column width='60%'}
+
+
+![](assets/2025-03-17-17-35-16.png){height=700}
+
+:::
+
+::::
+
+## Adding our own labels
+
+By clicking on 'edit labels' we are taken to a page where we can create any label we fancy
+
+![](assets/2025-03-17-17-37-41.png)
+
+![](assets/2025-03-17-17-37-50.png)
+
+## Filtering by Labels
+
+On our issues page, we can then click on the 'labels' dropdown to only find certain kinds of issue.
+
+![](assets/2025-03-17-17-39-34.png)
+
+:::{.callout-warning}
+
+Note - the filter won't happen until you click elsewhere on the screen (outside of the label popup)
+
+:::
+
+## Mentioning issues elsewhere
+
+It can be really helpful to mention issues on other issues, or in pull requests!
+
+Typing a `#` symbol brings up a list of recent issues, and by starting to type you can filter it down.
+
+![](assets/2025-03-17-17-41-11.png)
+
+![](assets/2025-03-17-17-41-42.png)
+
+
+## How mentioned issues display
+
+Mentioned issues will turn into a link when you save the description or comment
+
+![](assets/2025-03-17-17-44-26.png)
+
+And they'll show up in the linked issues and pull requests too
+
+![](assets/2025-03-17-17-44-37.png)
+
+## Closing Issues
+
+When you are done with an issue, we can write a comment (optional, but recommended!) and close it down.
+
+:::{.callout-note}
+If we want to, we can mention the ID of the pull request that closes this issue, or even the exact commit hash!
+:::
+
+## Fancy issue closing
+
+In pull requests, if we mention an issue by ID with the `#` notation, it will
+
+- expand the issue ID into the issue name
+- automatically close the issue when the pull request is merged in if you use certain keywords like 'resolves'
+
+![](assets/2025-03-17-17-47-20.png)
+
+
+## Milestones
+
+In your projects, you may have different milestones you are working towards.
+
+You might want to keep track of the issues you are aiming to achieve by different stages of the project - and then track your progress towards that.
+
+In [vidigi, I just use it to track issues I'm planning to fix in each minor version](https://github.com/Bergam0t/vidigi/milestones?direction=asc&sort=title&state=open)
+
+![](assets/2025-03-17-17-48-58.png)
+
+
+
+## Milestones - another approach
+
+In another project, we've tied it in more detail to due dates and goals.
+
+![](assets/2025-03-17-17-49-49.png)
+
+## Creating a milestone
+
+From the issue page, click 'milestones'.
+
+![](assets/2025-03-17-17-53-37.png)
+
+Then 'new milestone'
+
+![](assets/2025-03-17-17-53-51.png)
+
+## Populating milestone details
+
+From this, you can then enter a title of your choice, an optional due date, and any details to flesh out things like key goals or requirements.
+
+![](assets/2025-03-17-17-54-31.png)
+
+## Adding issues to a milestone via the milestones page
+
+Now, when we click on the milestone header, we are given the option to add any issue to our new milestone.
+
+![](assets/firefox_8xslVbNOLd.gif)
+
+# Projects
+
+Projects are an optional extra that you can use to enhance your use of issues.
+
+
+
+##
+
+
+
+
+
+
+
+
+
+
+
+
+# Project Documentation and Validation
+
+## An Introduction to Project Documentation and its role in Model Validation
+
+Why do I bang on so much about documentation?
+
+::: {.fragment}
+
+In my experience, lack of documentation
+
+::: {.incremental}
+- hinders reuse and adaptation - by you as well as by others!
+- can mask serious issues with assumptions or methods
+:::
+
+:::
+
+::: {.fragment}
+
+And the *process* of writing documentation is crucial for
+
+::: {.incremental}
+- helping you slow down and properly check your code is doing what you think it is
+- helping you be really confident in explaining your code to others
+:::
+
+:::
+
+
+## Quarto
+
+
+
+# Checklists
+
+There are a wide range of checklists out there for
+
+# STRESS-DES
+
+> STRESS-DES is 20-item checklist. It was designed to improve the reporting of DES models, ensuring that your report includes enough information for others to understand, evaluate and replicate the findings of your work.
+
+- [The Little Book of DES, STRESS-DES, Amy Heather](https://des.hsma.co.uk/stress_des.html)
+
+While it's designed for DES models, you may still find it provides some useful prompts for other kinds of models.
+
+
+## STRESS-DES: Objectives {.scrollable}
+
+| Section/Subsection|Item | Recommendation|
+| - | - | ---- |
+| Purpose of the model | 1.1 | <small>Explain the background and objectives for the model.</small> |
+| Model outputs | 1.2 | <small>Define all quantitative performance measures that are reported, using equations where necessary. <br><br>Specify how and when they are calculated during the model run along with how any measures of error such as confidence intervals are calculated.</small> |
+| Experimentation aims | 1.3 | <small>If the model has been used for experimentation, state the objectives that it was used to investigate.<br><br>(A) Scenario based analysis – Provide a name and description for each scenario, providing a rationale for the choice of scenarios and ensure that item 2.3 (below) is completed.<br><br>(B) Design of experiments – Provide details of the overall design of the experiments with reference to performance measures and their parameters (provide further details in data below).<br><br>(C) Simulation Optimisation – (if appropriate) Provide full details of what is to be optimised, the parameters that were included and the algorithm(s) that was be used.  Where possible provide a citation of the algorithm(s).</small> |
+
+## STRESS-DES: Logic {.scrollable}
+
+| Section/Subsection|Item | Recommendation|
+| - | - | ---- |
+| Base model overview diagram | 2.1 | <small>Describe the base model using appropriate diagrams and description.  This could include one or more process flow, activity cycle or equivalent diagrams sufficient to describe the model to readers.  Avoid complicated diagrams in the main text.  <br><br> The goal is to describe the breadth and depth of the model with respect to the system being studied.</small> |
+| Base model logic | 2.2 | <small>Give details of the base model logic. Give additional model logic details sufficient to communicate to the reader how the model works..</small> |
+| Scenario logic | 2.3 | <small>Give details of the logical difference between the base case model and scenarios (if any).  This could be incorporated as text or where differences are substantial could be incorporated in the same manner as 2.2..</small> |
+| Algorithms | 2.4 | <small>Provide further detail on any algorithms in the model that (for example) mimic complex or manual processes in the real world (i.e.  scheduling of arrivals/ appointments/ operations/ maintenance, operation of a conveyor system, machine breakdowns, etc.). <br><br> Sufficient detail should be included (or referred to in other published work) for the algorithms to be reproducible.  Pseudo-code may be used to describe an algorithm.</small> |
+
+## STRESS-DES: Logic (contd.) {.scrollable}
+
+| Section/Subsection|Item | Recommendation|
+| - | - | ---- |
+| Components - entities | 2.5.1 | <small>Give details of all entities within the simulation including a description of their role in the model and a description of all their attributes.</small> |
+| Components - activities | 2.5.2 | <small>Describe the activities that entities engage in within the model. Provide details of entity routing into and out of the activity.</small> |
+| Components - resources | 2.5.3 | <small>List all the resources included within the model and which activities make use of them.</small> |
+| Components - queues | 2.5.4 | <small>Give details of the assumed queuing discipline used in the model (e.g. First in First Out, Last in First Out, prioritisation, etc.). Where one or more queues have a different discipline from the rest, provide a list of queues, indicating the queuing discipline used for each. <br><br> If reneging, balking or jockeying occur, etc., provide details of the rules. Detail any delays or capacity constraints on the queues.</small> |
+| Components - entry/exit points | 2.5.5 | <small>Give details of the model boundaries i.e. all arrival and exit points of entities.  Detail the arrival mechanism (e.g. ‘thinning’ to mimic a non-homogenous Poisson process or balking).</small> |
+
+## STRESS-DES: Data
+
+| Section/Subsection|Item | Recommendation|
+| - | - | ---- |
+| Data sources | 3.1 | <small>List and detail all data sources. Sources may include:<br>• Interviews with stakeholders,<br>• Samples of routinely collected data,<br>• Prospectively collected samples for the purpose of the simulation study,<br>• Public domain data published in either academic or organisational literature.   Provide, where possible, the link and DOI to the data or reference to published literature.<br><br>All data source descriptions should include details of the sample size, sample date ranges and use within the study.</small> |
+| Pre-processing | 3.2 | <small>Provide details of any data manipulation that has taken place before its use in the simulation, e.g. interpolation to account for missing data or the removal of outliers.</small> |
+
+## STRESS-DES: Data (contd.)
+
+| Section/Subsection|Item | Recommendation|
+| - | - | ---- |
+| Input parameters | 3.3 | <small>List all input variables in the model. Provide a description of their use and include parameter values.  For stochastic inputs provide details of any continuous, discrete or empirical distributions used along with all associated parameters.  Give details of all time dependent parameters and correlation.<br><br>Clearly state:<br>• Base case data<br>• Data use in experimentation, where different from the base case.<br>• Where optimisation or design of experiments has been used, state the range of values that parameters can take.<br>• Where theoretical distributions are used, state how these were selected and prioritised above other candidate distributions.</small> |
+| Assumptions | 3.4 | <small>Where data or knowledge of the real system is unavailable what assumptions are included in the model? <br><br> This might include parameter values, distributions or routing logic within the model.</small> |
+
+
+## STRESS-DES: Experimentation {.scrollable}
+
+| Section/Subsection|Item | Recommendation|
+| - | - | ---- |
+| Initialisation | 4.1 | <small>Report if the system modelled is terminating or non-terminating.  State if a warm-up period has been used, its length and the analysis method used to select it.  <br><br> For terminating systems state the stopping condition.<br>State what if any initial model conditions have been included, e.g., pre-loaded queues and activities.  Report whether initialisation of these variables is deterministic or stochastic.</small> |
+| Run length | 4.2 | <small>Detail the run length of the simulation model and time units.</small> |
+| Estimation approach | 4.3 | <small>State the method used to account for the stochasticity: For example, two common methods are multiple replications or batch means. <br><br> Where multiple replications have been used, state the number of replications and for batch means, indicate the batch length and whether the batch means procedure is standard, spaced or overlapping. <br><br> For both procedures provide a justification for the methods used and the number of replications/size of batches.</small> |
+
+## STRESS-DES: Implementation
+
+| Section/Subsection|Item | Recommendation|
+| - | - | ---- |
+| Software or programming language | 5.1 | <small>State the operating system and version and build number.<br><br>State the name, version and build number of commercial or open source DES software that the model is implemented in.<br><br>State the name and version of general-purpose programming languages used (e.g. Python 3.5).<br><br>Where frameworks and libraries have been used provide all details including version numbers.</small> |
+| Random sampling | 5.2 | <small>State the algorithm used to generate random samples in the software/programming language used e.g. Mersenne Twister.<br><br>If common random numbers are used, state how seeds (or random number streams) are distributed among sampling processes.</small> |
+
+## STRESS-DES: Implementation (contd.) {.scrollable}
+
+| Section/Subsection|Item | Recommendation|
+| - | - | ---- |
+| Model execution | 5.3 | <small>State the event processing mechanism used e.g. three phase, event, activity, process interaction.<br><br>*Note that in some commercial software the event processing mechanism may not be published. In these cases authors should adhere to item 5.1 software recommendations.*<br><br>State all priority rules included if entities/activities compete for resources.<br><br>If the model is parallel, distributed and/or use grid or cloud computing, etc., state and preferably reference the technology used.  For parallel and distributed simulations the time management algorithms used.  If the HLA is used then state the version of the standard, which run-time infrastructure (and version), and any supporting documents (FOMs, etc.)</small> |
+| System specification | 5.4 | <small>State the model run time and specification of hardware used.  This is particularly important for large scale models that require substantial computing power.  For parallel, distributed and/or use grid or cloud computing, etc. state the details of all systems used in the implementation (processors, network, etc.).</small> |
+
+## STRESS-DES: Code access
+
+| Section/Subsection|Item | Recommendation|
+| - | - | ---- |
+| Computer model sharing statement | 6.1 | <small>Describe how someone could obtain the model described in the paper, the simulation software and any other associated software (or hardware) needed to reproduce the results.  Provide, where possible, the link and Digital Object Identifiers (DOIs) to these.</small> |
+
+
+# The STARS Framework
+
+STARS stands for **'Sharing Tools and Artefacts for Reusable Simulation'**
+
+> The STARS framework is a set of practical guidelines to help modellers share their simulation models in a way that makes them:
+>
+> ✅ Accessible – so others can easily find and access your model.
+>
+> ✅ Reusable - so people can use and adapt the model for their own work.
+>
+> ✅ Understandable and well-documented - so others can engage with and understand your model better.
+>
+> - [The Little Book of DES, The STARS Framework, Amy Heather](https://des.hsma.co.uk/stars.html)
+
+## STARS Components
+
+![](assets/2025-03-17-15-28-38.png)
+
+<small>Overview of the STARS Framework from Monks et al. (2024) (CC BY 4.0).</small>
+
+
+# Documentation with Quarto
+
+It's possible to set up a Quarto project within the same
+
+
+# Cool Finds
+
+## Code Snippets
+
+Code snippets are a handy way to shorten the process of entering repetitive code.
+
+## Opening the 'Configure Snippets' Menu
+
+
+
+
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+:::
+
+::: {.column width='50%'}
+
+![](assets/2025-03-17-13-40-50.png)
+
+:::
+
+::::
+
+## Choosing the snippet language
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+We will now be presented with a list of possible snippets.
+
+If working with Quarto, I'd recommend you use 'markdown' rather than 'Quarto', as then there's a neat little shortcut in VSCode we can use
+to
+
+:::
+
+::: {.column width='50%'}
+
+![](assets/2025-03-17-13-41-52.png)
+
+:::
+
+::::
+
+## Writing our snippet
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+:::
+
+::: {.column width='50%'}
+
+:::
+
+::::
+
+## Using our snippet
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+:::
+
+::: {.column width='50%'}
+
+:::
+
+::::
+
+
+## More on snippets
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+:::
+
+::: {.column width='50%'}
+
+:::
+
+::::

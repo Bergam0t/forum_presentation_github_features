@@ -133,6 +133,82 @@ When you start using a function from a package and it pops up with a load of ext
 
 ## Writing docstrings
 
+Docstrings are put **after** you define a function name
+
+A simple docstring might look like this:
+
+```{python}
+#| eval: true
+#| echo: true
+
+def get_meaning_life_universe_everything():
+    """Retrieves the answer to the ultimate question"""
+    return 42
+
+print(get_meaning_life_universe_everything())
+```
+
+
+Here's an article with a great introduction to writing docstrings.
+
+<https://www.datacamp.com/tutorial/docstrings-python>
+
+## Advanced Docstrings
+
+For more advanced docstrings, we also specify details about the inputs and outputs using specific notation.
+
+```{python}
+#| eval: true
+#| echo: true
+
+def multiply_two_numbers(number_1, number_2):
+    """
+    Multiplies two numbers and prints the result.
+
+    Parameters
+    ----------
+    number_1 : int or float
+        The first number to be multiplied.
+    number_2 : int or float
+        The second number to be multiplied.
+
+    Returns
+    -------
+    None
+        This function prints the result but does not return it.
+    """
+    print(number_1 * number_2)
+
+```
+
+## Our advanced docstring in action
+
+![](assets/2025-03-17-19-09-51.png)
+
+## Docstring writing hints
+
+:::: {.columns}
+
+::: {.column width='30%'}
+
+This is something that AI is generally decent at (though **check its output!**)
+
+Feed it your function, tell it your preferred docstring format (I like numpydoc), et voila!
+
+This can save a lot of time with functions with extensive inputs
+
+:::
+
+::: {.column width='70%'}
+
+![](assets/2025-03-17-19-06-41.png)
+
+:::
+
+::::
+
+
+# How I help you best
 
 ## Working asynchronously {.smaller}
 
@@ -142,9 +218,9 @@ When you start using a function from a package and it pops up with a load of ext
 
 A 'quick meeting' can often take a lot more time than you'd think!
 
-(and in all honesty, unless it's something like a typo, I'm unlikely to be able to resolve it within a call - though if you'd strongly prefer this, I can work with it)
+(and in all honesty, unless it's something like a typo or a very simple methodological question, I'm unlikely to be able to resolve it within a call)
 
-However, I can often squeeze in some time looking at problems and then send you details of
+However, I can often squeeze in some time looking at problems or questions and then send you details of
 
 - what I fixed
 - how I went about working out what to do!
@@ -159,6 +235,13 @@ However, I can often squeeze in some time looking at problems and then send you 
 :::
 
 ::::
+
+
+## Bookable slots
+
+However, I recognise that sometimes only a chat will do!
+
+I will be opening up some more bookable slots soon and sharing a link!
 
 
 # Advanced GitHub Features

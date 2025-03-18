@@ -28,7 +28,7 @@ I want us to be able to provide meaningful and timely help with your projects wh
 
 There are a few things you can do to make it easier for us to help you.
 
-## Try other avenues first!
+## Try other avenues first! {.smaller}
 
 ::: {.incremental}
 - Try debugging your code with print statements or logging (see [this chapter](https://des.hsma.co.uk/basic_debugging_tactics.html) of the DES book for an intro!)
@@ -47,13 +47,17 @@ If all else fails - I really am happy to help (and have taken a look at various 
 
 It helps if you can give me as much information as possible about
 
-- what you've already tried
 - what seems to be going wrong
 - what you're trying to achieve, and why
+- what you've already tried
+
+::: {.fragment}
 
 Having your code available on GitHub is the easiest way for us to troubleshoot issues.
 
 If you cannot provide it on GitHub, sending code files to us on Slack is acceptable, but please attach it as a file to a Slack message rather than copying and pasting.
+
+:::
 
 ## ... and runnable!
 
@@ -64,7 +68,7 @@ Please either provide
 
 If you are using branches, please make it clear which branch we need to be looking at!
 
-## What if I'm not allowed to share?
+## What if I'm not allowed to share? {.smaller}
 
 We might still be able to help!
 
@@ -72,9 +76,9 @@ We might still be able to help!
 
 Can you give us the gist of your problem? Like before, this might involve talking about
 
-- what you've already tried
 - what seems to be going wrong
 - what you're trying to achieve, and why
+- what you've already tried
 
 :::
 
@@ -148,6 +152,7 @@ def get_meaning_life_universe_everything():
 print(get_meaning_life_universe_everything())
 ```
 
+![](assets/2025-03-18-08-19-38.png)
 
 Here's an article with a great introduction to writing docstrings.
 
@@ -156,6 +161,8 @@ Here's an article with a great introduction to writing docstrings.
 ## Advanced Docstrings
 
 For more advanced docstrings, we also specify details about the inputs and outputs using specific notation.
+
+There are various formats that exist, like PyDoc and Google Docstrings - my personal favourite is **numpydoc**
 
 ```{python}
 #| eval: true
@@ -185,7 +192,7 @@ def multiply_two_numbers(number_1, number_2):
 
 ![](assets/2025-03-17-19-09-51.png)
 
-## Docstring writing hints
+## Docstring writing hints {.smaller}
 
 :::: {.columns}
 
@@ -193,9 +200,9 @@ def multiply_two_numbers(number_1, number_2):
 
 This is something that AI is generally decent at (though **check its output!**)
 
-Feed it your function, tell it your preferred docstring format (I like numpydoc), et voila!
+Feed it your function, tell it your preferred docstring format, et voila!
 
-This can save a lot of time with functions with extensive inputs
+This can save a lot of time with functions with extensive inputs over using a template - though there are good VSCode extensions to help you with this like [autoDocstring](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring).
 
 :::
 
@@ -270,7 +277,7 @@ Want a reminder of how to use GitHub?
 
 Take a look at session 7a here:
 
-https://hsma.co.uk/hsma_content/modules/current_module_details/7_git_and_web_development
+<https://hsma.co.uk/hsma_content/modules/current_module_details/7_git_and_web_development>
 
 Or scan the QR code
 
@@ -391,6 +398,8 @@ Labels allow us to
 
 Github provides us with a selection of predefined labels that we can choose from.
 
+By clicking on 'edit labels'...
+
 :::
 
 ::: {.column width='60%'}
@@ -404,7 +413,7 @@ Github provides us with a selection of predefined labels that we can choose from
 
 ## Adding our own labels
 
-By clicking on 'edit labels' we are taken to a page where we can create any label we fancy
+... we are taken to a page where we can create any label we fancy
 
 ![](assets/2025-03-17-17-37-41.png)
 
@@ -426,10 +435,16 @@ Note - the filter won't happen until you click elsewhere on the screen (outside 
 
 It can be really helpful to mention issues on other issues, or in pull requests!
 
-Typing a `#` symbol brings up a list of recent issues, and by starting to type you can filter it down.
+Typing a `#` symbol brings up a list of recent issues, and by starting to type you can filter it down by number...
 
 ![](assets/2025-03-17-17-41-11.png)
 
+
+## Mentioning issues elsewhere (contd.)
+
+... or by name
+
+![](assets/2025-03-17-17-41-42.png)
 
 ## How mentioned issues display
 
@@ -466,7 +481,7 @@ If we want to, we can mention the ID of the pull request that closes this issue,
 In pull requests, if we mention an issue by ID with the `#` notation, it will
 
 - expand the issue ID into the issue name
-- automatically close the issue when the pull request is merged in if you use certain keywords like 'resolves'
+- automatically close the issue when the pull request is merged in if you use [certain keywords like 'resolves'](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
 
 ![](assets/2025-03-17-17-47-20.png)
 
@@ -549,11 +564,23 @@ We then click on 'add item'
 
 ## Adding issues to columns
 
+:::: {.columns}
+
+::: {.column width='50%'}
+
 This brings up a search bar
 
 Clicking on the plus gives us some more options.
 
+:::
+
+::: {.column width='50%'}
+
 ![](assets/2025-03-17-18-04-33.png)
+
+:::
+
+::::
 
 If we click 'add items from repository' we can access our current repo's issues - or issues from other repos!
 
@@ -567,7 +594,9 @@ Once this is done, we have an issue in the column.
 
 ## Moving issues between columns
 
-We can move this around as we progress. Moving it to done automatically closes it!
+We can move this around as we progress.
+
+Moving it to done automatically closes it (though it might take 10-15 seconds to do so)!
 
 ![](assets/firefox_MslcDJ5LLP.gif)
 
@@ -630,7 +659,7 @@ And the *process* of writing documentation is crucial for
 
 It's possible to set up a Quarto project within the same folder as your main repository.
 
-Using the 'book' template, you can write a detailed
+Using the 'book' template, you can write a detailed, interactive document that covers the important details of your project, allowing you to tailor chapters or sections to readers interested in different levels of detail.
 
 :::
 
@@ -657,9 +686,11 @@ Or scan the QR code
 
 I've recently being diving into quartodoc too - this is a really cool addon for quarto that allows you to generate documentation for various functions in your project as well and weave that into a quarto book
 
-It's a bit more tricky to get started with than pure quarto (and is something you could look to incorporate at a later stage)
+It's a bit more tricky to get started with than pure quarto (and is something you could look to incorporate at a later stage in an already established quarto book)
 
 <https://github.com/machow/quartodoc>
+
+Another more established and popular alternative is [sphinx](https://www.sphinx-doc.org/en/master/), though I haven't used it myself.
 
 ## Quartodoc example - function page
 
@@ -667,9 +698,9 @@ It's a bit more tricky to get started with than pure quarto (and is something yo
 
 ::: {.column width='30%'}
 
-The documentation for my package vidigi is made using quarto + quartodoc - https://bergam0t.github.io/vidigi/vidigi_docs/
+The [documentation for my package vidigi](https://bergam0t.github.io/vidigi/vidigi_docs/) is made using quarto + quartodoc
 
-With pages like this <https://bergam0t.github.io/vidigi/reference/prep.reshape_for_animations.html>
+With pages like [this](https://bergam0t.github.io/vidigi/reference/prep.reshape_for_animations.html)
 being automatically generated by quartodoc
 
 
@@ -690,10 +721,8 @@ being automatically generated by quartodoc
 
 ::: {.column width='30%'}
 
-It also generates an overview of the functions you ask it to
-
-<https://bergam0t.github.io/vidigi/reference/>
-
+It also [generates an overview of the functions or classes you ask it to](
+<https://bergam0t.github.io/vidigi/reference/>)
 
 :::
 
@@ -706,7 +735,7 @@ It also generates an overview of the functions you ask it to
 ::::
 
 
-## Getting started with quartodoc and sphinx
+## Getting started with quartodoc
 
 There's a good introduction to quartodoc in their documentation: <https://machow.github.io/quartodoc/get-started/overview.html>
 
@@ -716,7 +745,7 @@ The _quarto.yml for vidigi would also be a good starting point if combining trad
 
 # Checklists
 
-There are a wide range of checklists out there for helping you ensure your code is up to scratch.
+There are a wide range of checklists out there for helping you ensure your code is as reusable and well documented as possible.
 
 I'm going to cover just a few today to give you inspiration - but I'd love to hear about any others people come across.
 

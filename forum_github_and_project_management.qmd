@@ -999,9 +999,9 @@ Open the menu from file --> preferences
 
 We will now be presented with a list of possible snippet languages.
 
-If working with Quarto, I'd recommend you use 'markdown' rather than 'Quarto', as then there's a neat little shortcut in VSCode we can use to access snippets while writing quarto docs (CTRL + SPACE)
+If working with Quarto, choose 'Quarto' from the dropdown. There's a neat little shortcut in VSCode we can use to access snippets while writing quarto docs (CTRL + SPACE).
 
-Alternatively, select Python
+Alternatively, select Python - in Python, our snippets will automatically be suggested as we start typing.
 
 :::
 
